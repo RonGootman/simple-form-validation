@@ -1,0 +1,67 @@
+.LV_invalid_field {
+    border: 2px solid #CC0000 !important;
+}
+
+.LV_invalid_field:focus {
+    border: none !important;
+}
+
+.LV_valid_field {
+  border: 2px solid #27da35 !important;
+}
+
+.LV_valid_icon {
+    display:inline-block;
+    margin-left: 5px;
+}
+
+.LV_valid_icon::after {
+  content: '';
+  display: block;
+
+  /*Make it a small rectangle so the border will create an L-shape*/
+  width: 4px;
+  height: 7px;
+
+  /*Add a white border on the bottom and left, creating that 'L' */
+  border: solid #27da35;
+  border-width: 0 3px 3px 0;
+ 
+  /*Rotate the L 45 degrees to turn it into a checkmark*/
+  transform: rotate(45deg);
+}
+
+.LV_invalid_icon {
+    display:inline-block;
+    margin-left: 3px;
+}
+
+.LV_invalid_icon::after {
+    content: '!';
+    display: block;
+    margin-left: 5px;
+    background: #CC0000;
+    width: 15px;
+    font-weight: 700;
+    height: 15px;
+    font-size: 0.75em;
+    text-align: center;
+    border-radius: 50px;
+    color: white;
+    line-height: 15px;
+}
+
+.LV_validation_message {
+    display: block;
+    font-size: 0.85em;
+    color: #CC0000;
+}
+
+
+.warning {
+  border: 2px solid orange !important;
+}
+
+.success {
+  border: 2px solid green !important;
+}
